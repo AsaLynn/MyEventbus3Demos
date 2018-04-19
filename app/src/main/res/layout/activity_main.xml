@@ -18,16 +18,22 @@
             android:text="Activity中EventBus接收消息回调" />
 
         <Button
-            android:id="@+id/btn1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="EventBus接收Activity关闭消息回调" />
-
-        <Button
             android:id="@+id/btn2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="EventBus的ThreadMoed使用!" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EventBus在新开启的Activity接收事件" />
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EventBus接收Activity关闭消息回调" />
 
 
     </LinearLayout>

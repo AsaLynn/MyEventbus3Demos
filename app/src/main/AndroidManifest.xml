@@ -19,7 +19,10 @@
         <activity android:name=".EventBusAActivity" />
         <activity android:name=".EventBusBActivity" />
         <activity android:name=".EventBusActivity" />
-        <activity android:name=".EventBusThreadModeActivity"></activity>
+        <activity android:name=".EventBusThreadModeActivity" />
+        <activity android:name=".EventBusStickyAActivity" />
+        <activity android:name=".EventBusStickyBActivity" />
+        <activity android:name=".EventBusStickyCActivity" />
     </application>
 
 </manifest>

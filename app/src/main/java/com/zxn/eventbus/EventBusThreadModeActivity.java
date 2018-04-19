@@ -199,10 +199,12 @@ public class EventBusThreadModeActivity extends BaseActivity {
                 }).start();
                 break;
             case R.id.btn_background:
+                //ThreadMode.BACKGROUND-->主线程中发送
                 String background_main_msg = "MessageEvent is from ThreadMode background:on MAIN";
                 post(new BackgroundMessageEvent(background_main_msg));
                 break;
             case R.id.btn_background_thread:
+                //ThreadMode.BACKGROUND-->子线程中发送
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
@@ -212,7 +214,7 @@ public class EventBusThreadModeActivity extends BaseActivity {
                 }).start();
                 break;
             case R.id.btn_ordered:
-                //ThreadMode: MAIN_ORDERED
+                //ThreadMode: MAIN_ORDERED-->单线程中发送
                 String btn_background_thread_msg = "MessageEvent is from ThreadMode MAIN_ORDERED:on MAIN";
                 post(new OrderedMessageEvent(btn_background_thread_msg));
 
@@ -223,6 +225,7 @@ public class EventBusThreadModeActivity extends BaseActivity {
                 post(new OrderedMessageEvent(btn_background_thread_msg2));
                 break;
             case R.id.btn_ordered_more_thread:
+                //ThreadMode: MAIN_ORDERED-->多线程中发送
                 for (int i = 0; i < 6; i++) {
                     final String msg = "MessageEvent is from ThreadMode MAIN_ORDERED:on more thread-->" + i;
                     new Thread(new Runnable() {

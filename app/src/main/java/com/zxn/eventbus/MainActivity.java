@@ -35,6 +35,7 @@ public class MainActivity extends BaseActivity {
     @OnClick({R.id.btn0,
             R.id.btn1,
             R.id.btn2,
+            R.id.btn3,
     })
     public void onViewClicked(View view) {
         switch (view.getId()) {
@@ -46,6 +47,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.btn2:
                 startActivity(EventBusThreadModeActivity.class);
+                break;
+            case R.id.btn3:
+                startActivity(EventBusStickyAActivity.class);
                 break;
         }
     }
