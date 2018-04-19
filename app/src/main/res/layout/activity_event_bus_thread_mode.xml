@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EventBusThreadModeActivity">
+
+    <TextView
+        android:id="@+id/tv_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="hello,this is eventbus thread mode" />
+
+    <Button
+        android:id="@+id/btn_postting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ThreadMode POSTING:main thread" />
+
+    <Button
+        android:id="@+id/btn_postting_thread"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ThreadMode POSTING:asynchronous thread" />
+
+    <Button
+        android:id="@+id/btn_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ThreadMode MAIN:" />
+
+    <Button
+        android:id="@+id/btn_async_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ThreadMode Async: main thread" />
+
+    <Button
+        android:id="@+id/btn_async_thread"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ThreadMode Async: asynchronous thread" />
+
+    <Button
+        android:id="@+id/btn_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ThreadMode BACKGROUND: main thread" />
+
+    <Button
+        android:id="@+id/btn_background_thread"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ThreadMode BACKGROUND: asynchronous thread" />
+
+    <Button
+        android:id="@+id/btn_ordered"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ThreadMode: MAIN_ORDERED" />
+
+    <Button
+        android:id="@+id/btn_ordered_more_thread"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ThreadMode MAIN_ORDERED: more thread" />
+
+
+</LinearLayout>
