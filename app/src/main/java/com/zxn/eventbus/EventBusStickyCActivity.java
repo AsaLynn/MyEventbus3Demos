@@ -39,9 +39,10 @@ public class EventBusStickyCActivity extends MyBaseActivity {
             EventBus
                     .getDefault()
                     .removeAllStickyEvents();
+            //使用这种方式删除也可以
+            //EventBus.getDefault().removeStickyEvent(stickyEvent);
             tvB.setText(stickyEvent);
         }
-
     }
 
     @OnClick(R.id.btn_close_page)
@@ -59,6 +60,5 @@ public class EventBusStickyCActivity extends MyBaseActivity {
     //接收上个页面传递过来的事件
     //注册之后,接收消息,采用手接受事件,此方法不做任何逻辑处理,但是必须定义否则报错.
     @Subscribe(sticky = true, threadMode = ThreadMode.MAIN)
-    public void onStickyMessage(String event) {
-    }
+    public void onStickyMessage(String event) {}
 }
