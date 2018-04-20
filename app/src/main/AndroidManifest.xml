@@ -24,6 +24,7 @@
         <activity android:name=".EventBusStickyAActivity" />
         <activity android:name=".EventBusStickyBActivity" />
         <activity android:name=".EventBusStickyCActivity" />
+        <activity android:name=".PrioritiesActivity"></activity>
     </application>
 
 </manifest>

@@ -30,6 +30,12 @@
             android:text="EventBus在新开启的Activity接收事件" />
 
         <Button
+            android:id="@+id/btn4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EventBus接收事件的优先级" />
+
+        <Button
             android:id="@+id/btn1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
