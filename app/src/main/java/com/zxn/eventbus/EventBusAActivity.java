@@ -3,18 +3,17 @@ package com.zxn.eventbus;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.king.base.BaseActivity;
 import com.king.base.util.LogUtils;
+import com.zxn.eventbus.base.MyBaseActivity;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class EventBusAActivity extends BaseActivity {
+public class EventBusAActivity extends MyBaseActivity {
 
     @BindView(R.id.tv)
     TextView tv;
@@ -25,6 +24,7 @@ public class EventBusAActivity extends BaseActivity {
     public void initUI() {
         setContentView(R.layout.activity_event_bus_a);
         ButterKnife.bind(this);
+        getSupportActionBar().setTitle(this.getClass().getSimpleName());
         //EventBus使用注册
         EventBus
                 .getDefault()
@@ -41,20 +41,15 @@ public class EventBusAActivity extends BaseActivity {
     }
 
     //定义方法接收消息.
-    @Subscribe(threadMode = ThreadMode.MAIN)
+    //threadMode = ThreadMode.MAIN
+    @Subscribe()
     public void onEventBusMessage(String msg) {
-        LogUtils.i(msg.concat("-------->"));
+        String concat = msg.concat("-------->");
+        LogUtils.i(concat);
+        showToast(concat);
+        tv.setText(concat);
     }
 
-    @Override
-    public void initData() {
-
-    }
-
-    @Override
-    public void addListeners() {
-
-    }
 
     @OnClick(R.id.btn)
     public void onViewClicked() {

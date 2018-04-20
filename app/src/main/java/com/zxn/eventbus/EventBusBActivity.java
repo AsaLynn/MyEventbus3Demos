@@ -3,7 +3,7 @@ package com.zxn.eventbus;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.king.base.BaseActivity;
+import com.zxn.eventbus.base.MyBaseActivity;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -11,7 +11,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class EventBusBActivity extends BaseActivity {
+public class EventBusBActivity extends MyBaseActivity {
 
     @BindView(R.id.et)
     EditText et;
@@ -22,16 +22,7 @@ public class EventBusBActivity extends BaseActivity {
     public void initUI() {
         setContentView(R.layout.activity_event_bus_b);
         ButterKnife.bind(this);
-    }
-
-    @Override
-    public void initData() {
-
-    }
-
-    @Override
-    public void addListeners() {
-
+        getSupportActionBar().setTitle(this.getClass().getSimpleName());
     }
 
     @OnClick(R.id.btn_close)
