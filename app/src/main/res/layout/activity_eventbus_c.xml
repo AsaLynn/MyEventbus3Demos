@@ -5,26 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".EventBusAActivity">
+    tools:context=".EventBusBActivity">
 
     <TextView
-        android:id="@+id/tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="hello eventbus!" />
-
-    <Button
-        android:id="@+id/btn"
+        android:id="@+id/tv_sticky_event"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="打开新的Activity" />
+        android:text="this is for recive sticky event" />
 
-    <Button
-        android:id="@+id/btn_c"
+    <TextView
+        android:id="@+id/tv_sticky_back"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="打开新的C_Activity" />
+        android:text="this is for send back event" />
+
+    <Button
+        android:id="@+id/btn_close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eventbus handle Sticky back event" />
+
+    <Button
+        android:id="@+id/btn_close2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sticky back boolean" />
 
 </LinearLayout>

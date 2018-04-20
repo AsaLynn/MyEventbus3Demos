@@ -25,7 +25,8 @@
         <activity android:name=".EventBusStickyBActivity" />
         <activity android:name=".EventBusStickyCActivity" />
         <activity android:name=".PrioritiesActivity" />
-        <activity android:name=".AsyncExecutorActivity"></activity>
+        <activity android:name=".AsyncExecutorActivity" />
+        <activity android:name=".EventBusCActivity" />
     </application>
 
 </manifest>
