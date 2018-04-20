@@ -34,6 +34,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="EventBus接收事件的优先级" />
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EventBus中的AsyncExecutor使用" />
 
         <Button
             android:id="@+id/btn1"

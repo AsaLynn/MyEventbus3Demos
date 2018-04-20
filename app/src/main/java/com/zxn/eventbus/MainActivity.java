@@ -37,6 +37,7 @@ public class MainActivity extends BaseActivity {
             R.id.btn2,
             R.id.btn3,
             R.id.btn4,
+            R.id.btn5,
     })
     public void onViewClicked(View view) {
         switch (view.getId()) {
@@ -54,6 +55,10 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.btn4:
                 startActivity(PrioritiesActivity.class);
+                break;
+            case R.id.btn5:
+                //AsyncExecutor
+                startActivity(AsyncExecutorActivity.class);
                 break;
         }
     }

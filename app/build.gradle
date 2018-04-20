@@ -9,6 +9,13 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        //配置生成MyEventBusIndex进行使用优化.
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [eventBusIndex: 'com.zxn.eventbus.index.MyEventBusIndex']
+            }
+        }
     }
     buildTypes {
         release {
@@ -26,6 +33,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation 'org.greenrobot:eventbus:3.1.1'
+    annotationProcessor 'org.greenrobot:eventbus-annotation-processor:3.1.1'
     implementation 'com.jakewharton:butterknife:8.8.1'
     //要添加此依赖否则事件无法响应
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
